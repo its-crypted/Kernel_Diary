@@ -36,6 +36,8 @@ sudo apt -y install vim git openssh-client libssl-dev \
 		 cscope git-email libncurses5-dev gcc make terminator \
 		 bc libz-dev openssl vim-gtk3 \
 
+
+
 sudo apt -y install kernel-package fakeroot ccache qemu qemu-kvm qemu-system \
 		 libvirt-daemon bridge-utils virt-manager gdb
 
