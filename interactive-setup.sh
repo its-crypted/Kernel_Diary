@@ -1,4 +1,4 @@
-#!bin/bash
+#bin/bash
 
 # RESET
 CO='\033[0m'
@@ -13,13 +13,42 @@ BPurple='\033[1;35m'      # Purple
 BCyan='\033[1;36m'        # Cyan
 BWhite='\033[1;37m'       # White
 
+echo -e "${BCyan}"
+echo "+---------------------------------------------+"
+cat >&2<< EOF
++----------------------------------------+
+|	Updating & Upgrading packages	 |
++----------------------------------------+
+EOF
+echo -e "${CO}"
+sudo apt -y update && sudo apt -y upgrade
+
+function set_git {
 echo -e "${BPurple}"
+u_name=git config user.name
+u_email=git config user.email
+if [ u_name == "" && u_email == "" ]
+then
+echo -e "${BPurple}"
+cat >&2<< EOF
++-------------------------------------------------+
+| I : You don't have git global config  set	  |
+|     Would you like to set the global user.name  |
+|     & user.email				  |
++-------------------------------------------------+
+EOF
+echo -e "${CO}"
+read -p "Enter[y/n]: " set_ne
+
+fi
 read -p "Enter user.email for git: " MAIL
 read -p "Enter user.name for git: " NAME
+}
+function set_ssh {
 read -p "Enter comment for \"ssk-keygen -C\"" SSH_C
+}
 echo -e "${CO}"
 
-sudo apt -y update && sudo apt -y upgrade
 
 CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
 if [ $CORE_COUNT > 0 ]
@@ -97,7 +126,7 @@ function kernel() {
 read -p "Enter no: " NUM
 echo "Select what you want to setup: "
 
-function all()
+function main()
 {
 
 cat >&2 << EOL
@@ -109,5 +138,8 @@ Enter what you want to setup
  5. ALL
 
 EOL
+
+read -p "Enter number: " set_num
+
 
 }
