@@ -5,6 +5,7 @@ set cc=80
 set autoindent
 colorscheme delek
 set columns=80
+set cursorline
 set mouse=a
 set guioptions+=k
 set guioptions-=L
