@@ -49,7 +49,6 @@ read -p "Enter comment for \"ssk-keygen -C\"" SSH_C
 }
 echo -e "${CO}"
 
-
 CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
 if [ $CORE_COUNT > 0 ]
 then
