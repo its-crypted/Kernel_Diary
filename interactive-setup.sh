@@ -24,12 +24,12 @@ echo -e "${CO}"
 sudo apt -y update && sudo apt -y upgrade
 
 function set_git {
-echo -e "${BPurple}"
-u_name=$(git config user.name)
-u_email=$(git config user.email)
-if [ u_name == "" && u_email == "" ]
-then
-echo -e "${BPurple}"
+	echo -e "${BPurple}"
+	u_name=$(git config user.name)
+	u_email=$(git config user.email)
+	if [ u_name == "" && u_email == "" ]
+	then
+	echo -e "${BPurple}"
 cat >&2<< EOF
 +-------------------------------------------------+
 | I : You don't have git global config  set	  |
@@ -37,22 +37,21 @@ cat >&2<< EOF
 |     & user.email				  |
 +-------------------------------------------------+
 EOF
-echo -e "${CO}"
-read -p "Enter[y/n]: " set_ne
-if [ set_ne == 'y' ]
-then
-	read -p "Enter user.email for git: " MAIL
-	read -p "Enter user.name for git: " NAME
-else
-	continue
-fi
-fi
+	echo -e "${CO}"
+	read -p "Enter[y/n]: " set_ne
+	if [ set_ne == 'y' ]
+	then
+		read -p "Enter user.email for git: " MAIL
+		read -p "Enter user.name for git: " NAME
+	else
+		continue
+	fi
+	fi
 }
 
 function set_ssh {
-read -p "Enter comment for \"ssk-keygen -C\"" SSH_C
+	read -p "Enter comment for \"ssk-keygen -C\"" SSH_C
 }
-echo -e "${CO}"
 
 CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
 if [ $CORE_COUNT > 0 ]
@@ -130,20 +129,45 @@ function kernel() {
 read -p "Enter no: " NUM
 echo "Select what you want to setup: "
 
-function main()
-{
+function main(){
 
 cat >&2 << EOL
 Enter what you want to setup
  1. Kernel
  2. Vim
- 3. SSH
- 4. QEMU
- 5. ALL
+ 3. Git
+ 4. SSH
+ 5. QEMU
+ 6. ALL
 
 EOL
 
-read -p "Enter number: " set_num
+	read -p "Enter number: " set_num
 
+	if [ set_num = 1 ]
+	then
+		kernel
+	elif [ set_num -eq 2 ]
+	then
+		vi_
+	elif [ set_num -eq 3 ]
+	then
+		set_git
+	elif [ set_num -eq 4 ]
+	then
+		set_ssh
+	elif [ set_num -eq 5 ]
+	then
+		qemu
+	elif [ set_num -eq 6 ]
+	then
+		kernel
+		vi_
+		set_git
+		set_ssh
+		qemu
+	else
+		exit 0;
+	fi
 
 }
