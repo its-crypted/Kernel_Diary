@@ -21,3 +21,11 @@ readable form.
 
 `sudo dmidecode -t 17`	gives the memory information 
 `sudo dmidecode -t 0` gives BIOS info
+
+## disk usage
+
+Following will give you the disk usage of the current directory
+in human readable form
+
+`du -h ./`
+
