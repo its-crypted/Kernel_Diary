@@ -29,3 +29,8 @@ in human readable form
 
 `du -h ./`
 
+## Number of content in a Directory
+
+This command will give how many files/dirs does the given dir have
+
+`ls -U | wc -l`
