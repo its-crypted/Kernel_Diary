@@ -34,3 +34,9 @@ in human readable form
 This command will give how many files/dirs does the given dir have
 
 `ls -U | wc -l`
+
+## Format disk
+
+This will give the partition table 
+
+`fdisk -l` 
