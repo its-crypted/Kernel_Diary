@@ -40,3 +40,17 @@ This command will give how many files/dirs does the given dir have
 This will give the partition table 
 
 `fdisk -l` 
+
+## LTTng Linux Tracing Tools Next Gen
+
+Required Deps
+
+`sudo apt install openjdk-19-jdk`
+
+For installing the LTTng 
+
+`sudo apt install lttng-tools lttng-modules-dkms liblttng-ust-dev`
+
+LTTng can be used with Trace Compass
+
+[Trace Compass Download](https://projects.eclipse.org/projects/tools.tracecompass/downloads)
