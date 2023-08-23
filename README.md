@@ -41,7 +41,7 @@ This will give the partition table
 
 `fdisk -l` 
 
-## LTTng Linux Tracing Tools Next Gen
+## LTTng Linux Tracing Toolkit Next Gen
 
 Required Deps
 
@@ -54,3 +54,15 @@ For installing the LTTng
 LTTng can be used with Trace Compass
 
 [Trace Compass Download](https://projects.eclipse.org/projects/tools.tracecompass/downloads)
+
+## eBPF (extended Berkeley Packet Filter)
+
+eBPF is used to provide the supporting infrastructure within the kernel.
+
+To use BPF, the system requirements are
+
+- Linux kernel 4.0 or Later
+- Kernel Support for BPF
+- BCC or bpftrace frontends installed.
+- Root access on the target system.
+
