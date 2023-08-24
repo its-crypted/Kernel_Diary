@@ -66,3 +66,12 @@ To use BPF, the system requirements are
 - BCC or bpftrace frontends installed.
 - Root access on the target system.
 
+## Disabling firewall on Linux use ufw(Uncomplicated FireWall)
+
+To check the status of firewall 
+
+`sudo ufw status`
+
+To disable the firewall in ubuntu
+
+`sudo ufw disable`
