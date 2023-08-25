@@ -75,3 +75,7 @@ To check the status of firewall
 To disable the firewall in ubuntu
 
 `sudo ufw disable`
+
+## FileZilla
+
+`sudo apt install filezilla`
