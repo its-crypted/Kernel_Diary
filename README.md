@@ -79,3 +79,8 @@ To disable the firewall in ubuntu
 ## FileZilla
 
 `sudo apt install filezilla`
+
+## Docker Commands
+
+`docker run -itd --name pi python`
+
