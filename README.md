@@ -83,4 +83,5 @@ To disable the firewall in ubuntu
 ## Docker Commands
 
 `docker run -itd --name pi python`
-
+`docker images`
+`docker rm <cont_id>`
