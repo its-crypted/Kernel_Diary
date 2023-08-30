@@ -85,3 +85,10 @@ To disable the firewall in ubuntu
 `docker run -itd --name pi python`
 `docker images`
 `docker rm <cont_id>`
+
+## Kernel download
+
+Following will clone the kernel with some commits made recently
+which saves a lot of disk space
+
+`git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git`
