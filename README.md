@@ -92,3 +92,6 @@ Following will clone the kernel with some commits made recently
 which saves a lot of disk space
 
 `git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git`
+
+Following will give you menu in gui format
+`make xconfig`
