@@ -97,7 +97,7 @@ kbuild is open source framework that provides some clues to the user via its UI.
 
  - [.] :- In-Kernel feature, Boolean Option(ON/OFF)
  	- [*] :- Compiled & built in kernel Image (y)
-	- \[ \] :- OFF (n)
+	- [[]] :- OFF (n)
  - <.> :- Feature which is in tristate
  	- <*> :- Compiled & built in kernel image (y)
 	- <M> :- Module, compiled & built as Linux Kernel Module(LKM) (m)
