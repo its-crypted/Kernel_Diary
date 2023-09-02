@@ -109,3 +109,9 @@ kbuild is open source framework that provides some clues to the user via its UI.
  - -*- :- A dependency requires this to be compiled in (y).
  - (...) :- Prompt an alphanumeric input is required
  - <Menu_entry> ---> :- A sub-menu follow
+
+## tar
+
+To extract a `*.tar.xz` in a particular directory  use following
+
+`tar xf xyz.tar.xz --directory=${HOME}/kernels/`
