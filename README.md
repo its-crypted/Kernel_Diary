@@ -95,3 +95,17 @@ which saves a lot of disk space
 
 Following will give you menu in gui format
 `make xconfig`
+
+kbuild is open source framework that provides some clues to the user via its UI.
+
+ - [.] :- In-Kernel feature, Boolean Option(ON/OFF)
+ 	- [*] :- Compiled & built in kernel Image (y)
+	- [[]] :- OFF (n)
+ - <.> :- Feature which is in tristate
+ 	- <*> :- Compiled & built in kernel image (y)
+	- <M> :- Module, compiled & built as Linux Kernel Module(LKM) (m)
+	- < > :- OFF (n)
+ - {.} :- A dependency exists for this conifg option, (m) or built in to kernle image
+ - -*- :- A dependency requires this to be compiled in (y).
+ - (...) :- Prompt an alphanumeric input is required
+ - <Menu_entry> ---> :- A sub-menu follow
