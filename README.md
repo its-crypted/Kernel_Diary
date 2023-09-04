@@ -106,3 +106,17 @@ kbuild is open source framework that provides some clues to the user via its UI.
  - -*- :- A dependency requires this to be compiled in (y).
  - (...) :- Prompt an alphanumeric input is required
  - <Menu_entry> ---> :- A sub-menu follow
+
+ ## cscope
+
+ Installing cscope
+
+ `sudo apt install cscope`
+ 
+ Creating a database
+
+ `cscope -Rbq`
+ - R : Recursive subdirs
+ - b : build database
+ - q : fast creation
+
