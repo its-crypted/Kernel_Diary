@@ -93,6 +93,9 @@ which saves a lot of disk space
 
 `git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git`
 
+Following will give you menu in gui format
+`make xconfig`
+
 kbuild is open source framework that provides some clues to the user via its UI.
 
  - [.] :- In-Kernel feature, Boolean Option(ON/OFF)
@@ -120,3 +123,8 @@ kbuild is open source framework that provides some clues to the user via its UI.
  - b : build database
  - q : fast creation
 
+## tar
+
+To extract a `*.tar.xz` in a particular directory  use following
+
+`tar xf xyz.tar.xz --directory=${HOME}/kernels/`
