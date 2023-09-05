@@ -128,3 +128,13 @@ kbuild is open source framework that provides some clues to the user via its UI.
 To extract a `*.tar.xz` in a particular directory  use following
 
 `tar xf xyz.tar.xz --directory=${HOME}/kernels/`
+
+## Kbuild System
+
+The linux kernel has implemented it's own building system which uses `make`
+for compiling the kernel. For menu based TUI kernel uses `make menuconfig`
+which give much flexiblity for the changing the options.
+`make help` will show all the options for building the kernel.
+
+`linux/Kconfig` is the main file for `menuconfig` the general setup config starts from here.
+Every dir has it's own `kconfig` file which is source form `Kconfig`
