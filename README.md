@@ -136,5 +136,29 @@ for compiling the kernel. For menu based TUI kernel uses `make menuconfig`
 which give much flexiblity for the changing the options.
 `make help` will show all the options for building the kernel.
 
-`linux/Kconfig` is the main file for `menuconfig` the general setup config starts from here.
+`linux/Kconfig` is the main file for `menuconfig` the general setup config starts from here. This is the initial screen of `menuconfig`
 Every dir has it's own `kconfig` file which is source form `Kconfig`
+
+To include a new config in `General Setup` we have to edit `init/Kconfig`.
+This will include a new option in the `menuconfig` under first option `General Setup`. Following is the edit in the `init/Kconfig`
+
+This addition is done under `LOCALVERSION_AUTO`
+
+```
+... 
+          which is done within the script "scripts/setlocalversion".)
+ 
+config PI_KERNEL_CHECK
+       bool "Test the pi kernel for the creating the new menu item in Kernel config"
+       default n
+       help
+               This option is merely a dummy 'test'; this will show you how
+               to interact with the linux kernel
+
+               Try setting this option to 'Y' (true), save & exit & see the 
+               effect this has by doing:
+                       grep "CONFIG_PI_KERNEL_CHECK" .config
+
+               if unsure, say N
+
+```
