@@ -162,3 +162,9 @@ config PI_KERNEL_CHECK
                if unsure, say N
 
 ```
+
+## cpu cmd
+
+`lscpu`
+
+`nproc`
