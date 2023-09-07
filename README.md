@@ -176,3 +176,17 @@ config PI_KERNEL_CHECK
 Store it in a variable & use it anywhere
 
 `TMPDIR=$(mktemp -d)`
+
+## Grub edit
+
+Following is the grub. The file is `sudo vi /etc/default/grub`
+
+```
+# This will run the latest installed kernel if kept  GRUB_DEFAULT=0
+GRUB_DEFAULT="Advance options for Ubuntu>Ubuntu, with Linux 6.2.0.32-generic"
+#GRUB_TIMEOUT_STYLE=hidden
+GRUB_TIMEOUT=20
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+```
