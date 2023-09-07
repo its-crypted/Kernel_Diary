@@ -168,3 +168,11 @@ config PI_KERNEL_CHECK
 `lscpu`
 
 `nproc`
+
+## Making temp dir
+
+`mktemp -d`   This will create a new temp dir under `/tmp`
+
+Store it in a variable & use it anywhere
+
+`TMPDIR=$(mktemp -d)`
