@@ -192,3 +192,5 @@ GRUB_CMDLINE_LINUX=""
 ```
 
 ## initramfs
+
+initial RAM file system
