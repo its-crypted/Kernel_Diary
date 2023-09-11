@@ -193,3 +193,7 @@ GRUB_CMDLINE_LINUX=""
 To add a background Image to grub add following line to above
 
 `BACKGROUND_IMAGE="Path to your.png"`
+
+## initramfs
+
+initial RAM file system
