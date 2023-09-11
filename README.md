@@ -190,3 +190,6 @@ GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 GRUB_CMDLINE_LINUX=""
 ```
+To add a background Image to grub add following line to above
+
+`BACKGROUND_IMAGE="Path to your.png"`
