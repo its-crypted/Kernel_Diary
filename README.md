@@ -197,3 +197,9 @@ To add a background Image to grub add following line to above
 ## initramfs
 
 initial RAM file system
+
+## Monitor dmesg live
+
+To monitor dmesg live follow
+
+`sudo dmesg -wH`
