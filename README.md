@@ -203,3 +203,7 @@ initial RAM file system
 To monitor dmesg live follow
 
 `sudo dmesg -wH`
+
+## Kernel debug levels
+
+
