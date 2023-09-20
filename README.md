@@ -200,6 +200,8 @@ initial RAM file system
 
 ## Monitor dmesg live
 
-To monitor dmesg live follow
+To monitor dmesg live follow. 
+-w --> follows the last line
 
 `sudo dmesg -wH`
+
