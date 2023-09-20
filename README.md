@@ -205,3 +205,16 @@ To monitor dmesg live follow.
 
 `sudo dmesg -wH`
 
+## Kernel debug levels
+
+There are 8 Debug levels starting form 0 in Linux Kernel
+
+ - KERN_EMERG	
+ - KERN_ALERT
+ - KERN_CRIT
+ - KERN_ERR
+ - KERN_WARNING
+ - KERN_NOTICE
+ - KERN_INFO
+ - KERN_DEBUG
+
