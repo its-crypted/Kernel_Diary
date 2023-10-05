@@ -218,3 +218,4 @@ There are 8 Debug levels starting form 0 in Linux Kernel
  - KERN_INFO
  - KERN_DEBUG
 
+## Assembly 
