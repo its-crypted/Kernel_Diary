@@ -224,4 +224,3 @@ There are 8 Debug levels starting form 0 in Linux Kernel
 
 ## Assembly 
 
-Adding here
