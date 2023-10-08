@@ -222,5 +222,3 @@ There are 8 Debug levels starting form 0 in Linux Kernel
 
 `sudo apt install simple-scan pdfarranger`
 
-## Assembly 
-
