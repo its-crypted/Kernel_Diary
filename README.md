@@ -233,3 +233,6 @@ ssd.
 To remove this edit `/etc/default/grub` & add
 
 `GRUB_DISABLE_OS_PROBER=false`
+
+To remove the complete warning you can edit `/etc/default/grub.d/*_ubuntu.cfg`
+and remove the warning
