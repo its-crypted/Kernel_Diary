@@ -222,3 +222,14 @@ There are 8 Debug levels starting form 0 in Linux Kernel
 
 `sudo apt install simple-scan pdfarranger`
 
+## GRUB
+
+I've encountered an error when booting the linux.
+The GRUB doesn't show multiple OS which are installed. It only shows a single OS.
+
+The `sudo os-prober` will show how many OS are currently installed on your
+ssd.
+
+To remove this edit `/etc/default/grub` & add
+
+`GRUB_DISABLE_OS_PROBER=false`
