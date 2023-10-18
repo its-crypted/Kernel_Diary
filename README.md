@@ -222,7 +222,7 @@ There are 8 Debug levels starting form 0 in Linux Kernel
 
 `sudo apt install simple-scan pdfarranger`
 
-## GRUB
+## GRUB os-prober
 
 I've encountered an error when booting the linux.
 The GRUB doesn't show multiple OS which are installed. It only shows a single OS.
@@ -235,4 +235,4 @@ To remove this edit `/etc/default/grub` & add
 `GRUB_DISABLE_OS_PROBER=false`
 
 To remove the complete warning you can edit `/etc/default/grub.d/*_ubuntu.cfg`
-and remove the warning
+and remove the warning.
