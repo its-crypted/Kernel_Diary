@@ -236,3 +236,9 @@ To remove this edit `/etc/default/grub` & add
 
 To remove the complete warning you can edit `/etc/default/grub.d/*_ubuntu.cfg`
 and remove the warning.
+
+## readelf
+
+elf - executable and linking format
+
+`readelf -h ./hello` --> This will give output for headers for elf
