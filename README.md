@@ -244,3 +244,5 @@ elf - executable and linking format
 `readelf -h ./hello` --> This will give output for headers for elf
 
 `readelf -l ./hello` --> file segment headers
+
+## Assembly
