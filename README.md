@@ -245,4 +245,6 @@ elf - executable and linking format
 
 `readelf -l ./hello` --> file segment headers
 
-## Assembly
+## Connecting two machines using Cross over cable
+
+
