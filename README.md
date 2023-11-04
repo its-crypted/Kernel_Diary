@@ -247,4 +247,5 @@ elf - executable and linking format
 
 ## Connecting two machines using Cross over cable
 
+Connect two machines with LAN cable 
 
