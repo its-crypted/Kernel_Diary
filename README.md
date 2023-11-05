@@ -249,3 +249,8 @@ elf - executable and linking format
 
 Connect two machines with LAN cable 
 
+ - Open the the Network Manager & add a new wiered network.
+ - Choose the MAC Address for each machine.
+ - Choose the IPv4 for the & selected the address to Manual.
+ - Enter the IP Address `10.0.0.1` --> this will be linked with the machine.
+ - Enter the NetMask as 255.255.255.0
