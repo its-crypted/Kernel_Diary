@@ -256,3 +256,6 @@ Connect two machines with LAN cable
  - Enter the NetMask as 255.255.255.0
  - Now try to ping to other machine using `ping 10.0.0.2`
 
+##  MIPS Architecture
+
+
