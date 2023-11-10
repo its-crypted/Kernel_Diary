@@ -261,3 +261,7 @@ Connect two machines with LAN cable
 `inxi` is a script which displays system information for console & IRC.
 
 `inxi -Fxxxrz` show Full details, z hides personal info, r gives out repo data
+
+## List Connected Monitors
+
+`xrandr --listmonitors` This will give out the resolutions as well
