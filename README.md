@@ -256,6 +256,8 @@ Connect two machines with LAN cable
  - Enter the NetMask as 255.255.255.0
  - Now try to ping to other machine using `ping 10.0.0.2`
 
-##  MIPS Architecture
+## inxi script
 
+`inxi` is a script which displays system information for console & IRC.
 
+`inxi -Fxxxrz` show Full details, z hides personal info, r gives out repo data
