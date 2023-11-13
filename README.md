@@ -266,4 +266,3 @@ Connect two machines with LAN cable
 
 `xrandr --listmonitors` This will give out the resolutions as well
 
-## Additional Command
