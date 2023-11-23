@@ -177,6 +177,12 @@ Store it in a variable & use it anywhere
 
 `TMPDIR=$(mktemp -d)`
 
+Best option to use is 
+
+```bash
+cd `mktemp -d`
+```
+
 ## Grub edit
 
 Following is the grub. The file is `sudo vi /etc/default/grub`
