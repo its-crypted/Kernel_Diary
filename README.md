@@ -272,3 +272,18 @@ Connect two machines with LAN cable
 
 `xrandr --listmonitors` This will give out the resolutions as well
 
+## QEMU creating images & mounting
+
+Using `debootstrap` a basic Debian system. We'll install a debian distro
+in a directory. We'll create an qemu image file on a directory & use 
+debootstrap in the mount point.
+
+```bash
+qemu-img create debian.img 10g #This will create an image of 10GB named debian.img
+mkfs.ext4 debian.img
+mkdir mount-img
+sudo mount -o loop debian.img mount-img
+sudo debootstrap --arch amd64 bookworm mount-img #add a distro to the dir mount-img
+sudo chroot mount-img #This will take you to the root of the file system
+passwd		#Set a new password for the debian system
+```
