@@ -286,4 +286,13 @@ sudo mount -o loop debian.img mount-img
 sudo debootstrap --arch amd64 bookworm mount-img #add a distro to the dir mount-img
 sudo chroot mount-img #This will take you to the root of the file system
 passwd		#Set a new password for the debian system
+sudo umount mount-img
+rmdir mount-img
+```
+
+To run the qemu basic system
+
+```bash
+qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda debian.img \
+  -append "root=/dev/sda"
 ```
