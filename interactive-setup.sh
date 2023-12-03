@@ -119,20 +119,21 @@ function kernel() {
 		 dwarves zstd libelf-dev flex bison exuberant-ctags \
 		 cscope git-email libncurses5-dev gcc make terminator \
 	
-	echo "Which Kernel you want to download?"
+	echo "Which Kernel you want to download? Currently the depth for dow
+	downloading the kernel has been set to 3"
 	echo "1. Mainline"
 	echo "2. Stable"
 	echo "3. Next"
 	read -p "--> " k_num
 	if [ k_num -eq 1 ]
 	then 
-		git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
+		git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 	elif [ k_num -eq 2 ]
 	then
-		git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
+		git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 	elif [ k_num -eq 3 ]
 	then 
-		git clone git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+		git clone --depth=3 git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
 	else
 		echo "Exiting -- Enter proper number"
 		exit 0
