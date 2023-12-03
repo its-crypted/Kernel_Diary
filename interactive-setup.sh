@@ -118,12 +118,18 @@ function kernel() {
 		 linux-headers-`uname -r` build-essential \
 		 dwarves zstd libelf-dev flex bison exuberant-ctags \
 		 cscope git-email libncurses5-dev gcc make terminator \
-		 bc libz-dev openssl vim-gtk3 
+}
 
-    sudo apt -y install kernel-package fakeroot ccache qemu \
+function qemu() {
+   	 sudo apt -y install kernel-package fakeroot ccache qemu \
          qemu-kvm qemu-system libvirt-daemon bridge-utils \
          virt-manager gdb
 
+	sudo usermod -aG libvirt $USER 
+	sudo usermod -aG kvm $USER
+
+	sudo systemctl start libvirtd
+	sudo systemctl enable libvirtd
 }
 
 read -p "Enter no: " NUM
