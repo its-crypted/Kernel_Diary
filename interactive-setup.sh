@@ -118,6 +118,25 @@ function kernel() {
 		 linux-headers-`uname -r` build-essential \
 		 dwarves zstd libelf-dev flex bison exuberant-ctags \
 		 cscope git-email libncurses5-dev gcc make terminator \
+	
+	echo "Which Kernel you want to download?"
+	echo "1. Mainline"
+	echo "2. Stable"
+	echo "3. Next"
+	read -p "--> " k_num
+	if [ k_num -eq 1 ]
+	then 
+		git clone 
+	elif [ k_num -eq 2 ]
+	then
+		git clone 
+	elif [ k_num -eq 3 ]
+	then 
+		git clone
+	else
+		echo "Exiting -- Enter proper number"
+		exit 0
+	fi
 }
 
 function qemu() {
@@ -175,5 +194,4 @@ EOL
 	else
 		exit 0;
 	fi
-
 }
