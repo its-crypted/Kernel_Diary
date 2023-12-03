@@ -126,13 +126,13 @@ function kernel() {
 	read -p "--> " k_num
 	if [ k_num -eq 1 ]
 	then 
-		git clone 
+		git clone git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
 	elif [ k_num -eq 2 ]
 	then
-		git clone 
+		git clone git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 	elif [ k_num -eq 3 ]
 	then 
-		git clone
+		git clone git://git.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
 	else
 		echo "Exiting -- Enter proper number"
 		exit 0
