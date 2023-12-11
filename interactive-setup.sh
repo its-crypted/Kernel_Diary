@@ -152,13 +152,10 @@ function qemu() {
 	sudo systemctl enable libvirtd
 }
 
-read -p "Enter no: " NUM
-echo "Select what you want to setup: "
-
 function main(){
 
 cat >&2 << EOL
-Enter what you want to setup
+Setup tools
  1. Kernel
  2. Vim
  3. Git
@@ -168,6 +165,7 @@ Enter what you want to setup
 
 EOL
 
+	echo "Select what you want to setup"
 	read -p "Enter number: " set_num
 
 	if [ set_num = 1 ]
