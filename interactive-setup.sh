@@ -194,3 +194,5 @@ EOL
 		exit 0;
 	fi
 }
+
+main()	
