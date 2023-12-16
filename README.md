@@ -338,3 +338,22 @@ Key is valid for? (0) 3
 
 After this is the personal info you'll need to fill in. This will gnerate
 the new key for you.
+
+Listing all the keys
+
+`gpg --list-secret-keys --keyid-format long`
+
+Output will be listing of all the keys you have
+
+```
+-----------------------------
+sec   rsa4096/AxxxxxxxxxxxxxxF 2023-12-16 [SC] [expires: 2023-12-19]
+      7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+uid                 [ultimate] <Name of user> (comment) <mail@mail.com>
+ssb   rsa4096/xxxxxxxxxxxxxxx4 2023-12-16 [E] [expires: 2023-12-19]
+```
+
+Copy `sec` key after `/` & apply gpg.  \
+Printing the GPG key id which could be shared to public.
+
+`gpg --armor --export AxxxxxxxxxxxxxxF`
