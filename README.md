@@ -304,3 +304,37 @@ Generating a key is as follows
 
 `gpg --full-generate-key`
 
+Select a default or the preffered kind of key in the output. \
+```
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+  (14) Existing key from card
+Your selection? 1
+```
+
+Next will be the keysize of the key. I'm entering 4096 which is max bits.
+
+```
+RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072) 4096
+```
+
+Next will be the expiry time of the key. After this time you'll have to renew the key. \
+I'll be entering 3 days
+
+```
+Requested keysize is 4096 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      <n>  = key expires in n days
+      <n>w = key expires in n weeks
+      <n>m = key expires in n months
+      <n>y = key expires in n years
+Key is valid for? (0) 3
+```
+
+After this is the personal info you'll need to fill in. This will gnerate
+the new key for you.
