@@ -296,3 +296,11 @@ To run the qemu basic system
 qemu-system-x86_64 -kernel arch/x86/boot/bzImage -hda debian.img \
   -append "root=/dev/sda"
 ```
+
+## Generating GPG key
+
+GNU Privacy Guard is used for sending & recieving data securly. \
+Generating a key is as follows
+
+`gpg --full-generate-key`
+
