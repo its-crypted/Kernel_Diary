@@ -363,3 +363,9 @@ Printing the GPG key id which could be shared to public.
 grep pattern from a file & display content below it
 
 `grep -A 10 "GPG" README.md`
+
+## xclip
+
+copy the content to the clipboard using xclip
+
+`xclip -sel clip f_name`
