@@ -357,3 +357,9 @@ Copy `sec` key after `/` & apply gpg.  \
 Printing the GPG key id which could be shared to public.
 
 `gpg --armor --export AxxxxxxxxxxxxxxF`
+
+## grep pattern
+
+grep pattern from a file & display content below it
+
+`grep -A 10 "GPG" README.md`
