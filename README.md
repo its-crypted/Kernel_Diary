@@ -358,6 +358,20 @@ Printing the GPG key id which could be shared to public.
 
 `gpg --armor --export AxxxxxxxxxxxxxxF`
 
+After the key expires following will be the error
+
+```bash
+error: gpg failed to sign the data:
+[GNUPG:] KEYEXPIRED 1703001911
+[GNUPG:] KEY_CONSIDERED 7F4ABF5D85CC84B998B2A9386A1C8E7A22990ACF 3
+gpg: skipped "6A1C8E7A22990ACF": Unusable secret key
+[GNUPG:] INV_SGNR 9 6A1C8E7A22990ACF
+[GNUPG:] FAILURE sign 54
+gpg: signing failed: Unusable secret key
+
+fatal: failed to write commit object
+```
+
 ## grep pattern
 
 grep pattern from a file & display content below it
@@ -369,3 +383,4 @@ grep pattern from a file & display content below it
 copy the content to the clipboard using xclip
 
 `xclip -sel clip f_name`
+
