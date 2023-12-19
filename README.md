@@ -358,14 +358,22 @@ Printing the GPG key id which could be shared to public.
 
 `gpg --armor --export AxxxxxxxxxxxxxxF`
 
+Adding the gpg key to git 
+
+`git config --global user.signingKey AxxxxxxxxxxxxxxF`
+
+Sign all commits using gpg by default use following
+
+`git config --global commit.gpgsign true`
+
 After the key expires following will be the error
 
 ```bash
 error: gpg failed to sign the data:
-[GNUPG:] KEYEXPIRED 1703001911
-[GNUPG:] KEY_CONSIDERED 7F4ABF5D85CC84B998B2A9386A1C8E7A22990ACF 3
-gpg: skipped "6A1C8E7A22990ACF": Unusable secret key
-[GNUPG:] INV_SGNR 9 6A1C8E7A22990ACF
+[GNUPG:] KEYEXPIRED 1xxxxxxxx1
+[GNUPG:] KEY_CONSIDERED 7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxF 3
+gpg: skipped "6xxxxxxxxxxxxxxx": Unusable secret key
+[GNUPG:] INV_SGNR 9 6xxxxxxxxxxxxxxx
 [GNUPG:] FAILURE sign 54
 gpg: signing failed: Unusable secret key
 
