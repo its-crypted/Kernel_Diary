@@ -152,6 +152,11 @@ function qemu() {
 	sudo systemctl enable libvirtd
 }
 
+function gengpg() {
+	gpg --full-generate-keys
+	gpg --list-secret-keys --keyid-format long
+}
+
 function main(){
 
 cat >&2 << EOL
