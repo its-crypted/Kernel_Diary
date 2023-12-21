@@ -167,6 +167,7 @@ Setup tools
  4. SSH
  5. QEMU
  6. ALL
+ 7. GPG
 
 EOL
 
@@ -195,6 +196,7 @@ EOL
 		set_git
 		set_ssh
 		qemu
+		gengpg
 	else
 		exit 0;
 	fi
