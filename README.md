@@ -380,6 +380,14 @@ gpg: signing failed: Unusable secret key
 fatal: failed to write commit object
 ```
 
+Removing the Old keys
+
+```bash
+gpg --list-secret-keys
+gpg --delete-secret-keys 7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxF 
+
+```
+
 ## grep pattern
 
 grep pattern from a file & display content below it
