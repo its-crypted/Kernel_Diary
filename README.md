@@ -400,3 +400,6 @@ copy the content to the clipboard using xclip
 
 `xclip -sel clip f_name`
 
+## Using Syzkaller
+
+Install deps `qemu` `git` `openssh` `go`
