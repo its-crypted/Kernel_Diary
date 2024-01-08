@@ -411,4 +411,6 @@ qemu-system-x86_64 -m 8G -smp 8 -kernel ../test_main/arch/x86/boot/bzImage -appe
 
 To export a var `export KERNEL=../test` will give the o/p after echo `../test` \
 To get extract full path of the dir do following \
-`export KERNEL=`readlink -f ../test``
+```bash
+export KERNEL=`readlink -f ../test`
+```
