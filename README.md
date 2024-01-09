@@ -422,3 +422,15 @@ Daemon process run in the background which don't have tty. These are started by 
 init scripts. Daemon file are places in `/etc/systemd/system/` 
 For creating a system daemon you need to create a `.service` file. suppose we \
 have a file called `v4l2_param` & this is to be run at the time of boot.
+
+## Creating SECURED HASH ALGORITHM checksum
+
+To check if the file is not altered or changed or malfunction SHA is used 
+creating the checksum file
+
+`sha512sum file1 > checksum_file` \
+`sha512sum file2 > checksum_file` \
+
+If the file is not alterted the following command will just produce `OK` \
+`sha512sum --check checksum_file` \
+Above will check if the file is changed or not & verify integrity
