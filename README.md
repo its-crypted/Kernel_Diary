@@ -434,3 +434,8 @@ creating the checksum file
 If the file is not alterted the following command will just produce `OK` \
 `sha512sum --check checksum_file` \
 Above will check if the file is changed or not & verify integrity
+
+## Check the Installation date for Linux distro
+
+Just by doing `stat` on root dir you'll get the `Birth` date with time. \
+`stat /`
