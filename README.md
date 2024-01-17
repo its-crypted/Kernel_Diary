@@ -422,6 +422,7 @@ Daemon process run in the background which don't have tty. These are started by 
 init scripts. Daemon file are places in `/etc/systemd/system/` 
 For creating a system daemon you need to create a `.service` file. suppose we \
 have a file called `v4l2_param` & this is to be run at the time of boot.
+TODO
 
 ## Creating SECURED HASH ALGORITHM checksum
 
@@ -439,3 +440,5 @@ Above will check if the file is changed or not & verify integrity
 
 Just by doing `stat` on root dir you'll get the `Birth` date with time. \
 `stat /`
+
+## 
