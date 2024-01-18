@@ -441,4 +441,8 @@ Above will check if the file is changed or not & verify integrity
 Just by doing `stat` on root dir you'll get the `Birth` date with time. \
 `stat /`
 
-## 
+## Changing File permission 
+
+Change file permissions at same time like removing other permission & adding \
+user & group permission \
+`chmod u+rwx,g-rx,o= filename`
