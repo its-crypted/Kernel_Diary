@@ -446,3 +446,7 @@ Just by doing `stat` on root dir you'll get the `Birth` date with time. \
 Change file permissions at same time like removing other permission & adding \
 user & group permission \
 `chmod u+rwx,g-rx,o= filename`
+
+## Check the binutils version
+
+To check buintils version use `ld -v`
