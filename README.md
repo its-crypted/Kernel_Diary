@@ -450,3 +450,12 @@ user & group permission \
 ## Check the binutils version
 
 To check buintils version use `ld -v`
+
+## Multiple ssh keys for github
+
+If the error like permission denied to `user` comes while pushig the code to \
+github use following 
+```bash
+eval `ssh-agent -s`
+ssh-add ~/.ssh/<private-key-of-particular-acc>
+```
