@@ -457,5 +457,7 @@ If the error like permission denied to `user` comes while pushig the code to \
 github use following 
 ```bash
 eval `ssh-agent -s`
+ssh-add -L # lists all the keys
 ssh-add ~/.ssh/<private-key-of-particular-acc>
 ```
+
