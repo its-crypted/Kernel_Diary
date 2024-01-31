@@ -155,7 +155,7 @@ function qemu() {
 function gengpg() {
 	gpg --full-generate-keys
 	gpg --list-secret-keys --keyid-format long
-	gpg `grep
+	gpg `grep "rsa*"`
 	
 }
 
