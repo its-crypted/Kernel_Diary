@@ -462,3 +462,6 @@ ssh-add ~/.ssh/<private-key-of-particular-acc>
 ```
 
 ## System Programming
+
+Symbolic Links : symlinks provides an alternative name for a file. But whereas \
+normal link is a filename-plus-pointer entry in a directory list
