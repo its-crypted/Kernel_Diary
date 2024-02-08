@@ -465,3 +465,6 @@ ssh-add ~/.ssh/<private-key-of-particular-acc>
 
 Symbolic Links : symlinks provides an alternative name for a file. But whereas \
 normal link is a filename-plus-pointer entry in a directory list
+Filenames can be 255 chars long & cannot use / & \0(null char) in it.
+File names cannot start with the - as it may be mistaken while passing in interpreter.
+65 chars [-._a-zA-Z0-9] can be used while giving a name to a file.
