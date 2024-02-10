@@ -476,3 +476,12 @@ parent of all processes, which is derieved from the program file /sbin/init.\
 The init process always has the process ID 1 and runs with superuser previleges. \
 The init process can't be killed & it terminates only when system is shutdown. \
 
+## The Daemon Process
+
+It's a special purpose process that is created and handled byt the system in the \
+same way as other processes but has following characterstics:
+- It's long lived. A daemon process is often started at system boot and remains \
+in existence until the system is shut down.
+- It runs in the background, and has no controlling terminal from which it can \
+read input or to which it can write outpu.
+eg. syslogd & httpd
