@@ -468,3 +468,11 @@ normal link is a filename-plus-pointer entry in a directory list
 Filenames can be 255 chars long & cannot use / & \0(null char) in it.
 File names cannot start with the - as it may be mistaken while passing in interpreter.
 65 chars [-._a-zA-Z0-9] can be used while giving a name to a file.
+
+## The *init* process
+
+When booting the system, the kernel creates a special process called init, the \
+parent of all processes, which is derieved from the program file /sbin/init.\
+The init process always has the process ID 1 and runs with superuser previleges. \
+The init process can't be killed & it terminates only when system is shutdown. \
+
