@@ -485,3 +485,11 @@ in existence until the system is shut down.
 - It runs in the background, and has no controlling terminal from which it can \
 read input or to which it can write outpu.
 eg. syslogd & httpd
+
+## Resource limits
+
+Each process consumes resources, such as open files, memory, & cpu time.
+`setrlimit()` system call can establish upper limit on consumtion of resources \
+for a process. Each resource limit has two associated values: a soft limit \
+which limits the amount the process may consume  & a hard limit, which is ceiling \
+on the value to which the soft limit may be extended.
