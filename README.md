@@ -493,3 +493,7 @@ Each process consumes resources, such as open files, memory, & cpu time.
 for a process. Each resource limit has two associated values: a soft limit \
 which limits the amount the process may consume  & a hard limit, which is ceiling \
 on the value to which the soft limit may be extended.
+
+## Memory mapping
+
+`mmap()`
