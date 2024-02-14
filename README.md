@@ -497,3 +497,4 @@ on the value to which the soft limit may be extended.
 ## Memory mapping
 
 `mmap()`
+memory mapping is done on virutal memory to physical address
