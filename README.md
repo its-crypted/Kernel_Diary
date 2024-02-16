@@ -518,3 +518,8 @@ on the value to which the soft limit may be extended.
 
 `mmap()`
 memory mapping is done on virutal memory to physical address
+
+
+## Install inotify
+
+`sudo apt install libinotifytool0-dev` This is package for notification popup
