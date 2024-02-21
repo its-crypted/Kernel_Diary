@@ -523,3 +523,7 @@ memory mapping is done on virutal memory to physical address
 ## Install inotify
 
 `sudo apt install libinotifytool0-dev` This is package for notification popup
+
+## Compress jpg using `jpegoptim`
+
+`jpegoptim --size=1024k file.jpg`
