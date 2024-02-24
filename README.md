@@ -526,6 +526,7 @@ memory mapping is done on virutal memory to physical address
 
 ## Compress jpg using `jpegoptim`
 
+Following will compress the output file to 1MB
 `jpegoptim --size=1024k file.jpg`
 
 ## Compiling the Kernel
