@@ -527,3 +527,14 @@ memory mapping is done on virutal memory to physical address
 ## Compress jpg using `jpegoptim`
 
 `jpegoptim --size=1024k file.jpg`
+
+## Compiling the Kernel
+
+Tailoring the kernel to your system is by using `make localmodconfig`.
+This options creates a configuration file based on the list of modules currently \
+loaded on the system.
+```
+lsmod > /tmp/mymods
+make LSMOD=/tmp/mymods localmodconfig
+make -j`nproc`
+```
