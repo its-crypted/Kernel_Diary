@@ -539,3 +539,14 @@ lsmod > /tmp/mymods
 make LSMOD=/tmp/mymods localmodconfig
 make -j`nproc`
 ```
+
+## Enabling the WiFi & Bluetooth support for custom kernel
+
+```bash
+make menuconfig
+# WiFi
+Device Drivers > Network device support > Wireless LAN > (look for Intel) Intel Wireless WiFi Next Gen AGN - Wireless-N/Advanced-N/Ultimate-N (iwlwifi)
+
+# Bluetooth
+Networking support > Bluetooth subsystem support [M] > Bluetooth Classic (BR/EDR) features [*]
+```
