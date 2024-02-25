@@ -550,3 +550,7 @@ Device Drivers > Network device support > Wireless LAN > (look for Intel) Intel 
 # Bluetooth
 Networking support > Bluetooth subsystem support [M] > Bluetooth Classic (BR/EDR) features [*]
 ```
+
+## Bluetooth Modle number & name
+
+`inxi -Eaz` will provide you with bluetooth info
