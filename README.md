@@ -554,3 +554,7 @@ Networking support > Bluetooth subsystem support [M] > Bluetooth Classic (BR/EDR
 ## Bluetooth Modle number & name
 
 `inxi -Eaz` will provide you with bluetooth info
+
+## Grub kernel detect
+
+Edit `/etc/default/grub` and add `GRUB_CMDLINE_LINUX_DEFAULT="dis_ucode_ldr"
