@@ -558,3 +558,7 @@ Networking support > Bluetooth subsystem support [M] > Bluetooth Classic (BR/EDR
 ## Grub kernel detect
 
 Edit `/etc/default/grub` and add `GRUB_CMDLINE_LINUX_DEFAULT="dis_ucode_ldr"
+
+## Update BIOS
+
+Updating BIOS using USB, download firmware form official site.
