@@ -558,3 +558,29 @@ Networking support > Bluetooth subsystem support [M] > Bluetooth Classic (BR/EDR
 ## Grub kernel detect
 
 Edit `/etc/default/grub` and add `GRUB_CMDLINE_LINUX_DEFAULT="dis_ucode_ldr"
+
+## `inital ramdisk` Freeze of linux Kernel
+
+Following will give when `sudo apt autoremove` will be done.
+
+```bash
+ Building initial module for 6.8.0-rc6-next-20240228Pik
+ERROR (dkms apport): kernel package linux-headers-6.8.0-rc6-next-20240228Pik is not su
+pported
+Error! Bad return status for module build on kernel: 6.8.0-rc6-next-20240228Pik (x86_6
+4)
+Consult /var/lib/dkms/nvidia/535.161.07/build/make.log for more information.
+dpkg: error processing package nvidia-dkms-535 (--configure):
+ installed nvidia-dkms-535 package post-installation script subprocess returned error 
+exit status 10
+Processing triggers for initramfs-tools (0.140ubuntu13.4) ...
+update-initramfs: Generating /boot/initrd.img-6.8.0-rc6-next-20240228Pik
+W: Possible missing firmware /lib/firmware/rtl_nic/rtl8126a-2.fw for built-in driver r
+8169
+Errors were encountered while processing:
+ nvidia-dkms-535
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+```
+
+For Removing the ERROR `E: Sub-process /usr/bin/dpkg returned an error code (1)` \
+use `sudo dpkg --configure -a`
