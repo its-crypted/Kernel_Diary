@@ -584,3 +584,7 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 
 For Removing the ERROR `E: Sub-process /usr/bin/dpkg returned an error code (1)` \
 use `sudo dpkg --configure -a`
+
+## Update BIOS
+
+Updating BIOS using USB, download firmware form official site.
