@@ -588,3 +588,30 @@ use `sudo dpkg --configure -a`
 ## Update BIOS
 
 Updating BIOS using USB, download firmware form official site.
+
+## DAMON
+
+Install `damo_deps` first on your customized kernel.
+Customize the kernel first using following CONFIGS to the kernel
+
+Firmware issues
+```bash
+CONFIG_SYSFB_SIMPLEFB=y
+CONFIG_DRM_SIMPLEDRY=y
+CONFIG_DRM_FBDEV_EMULATIONS=y
+```
+
+Config for DAMON
+```bash
+make menuconfig
+
+Memory Management Config
+	|-> Data Access Monitoring
+	|	|-> [*] DAMON: Data Access Monitoring Framework 
+	|		[*]   Data access monitoring operations for virtual address space
+	|	    	[*]   Data access monitoring operations for the physical address  
+	|	    [*] DAMON sysfs interface                                         
+	|	    [*] DAMON debugfs interface (DEPRECATED!)                         
+	|	    [*] Build DAMON-based reclaim (DAMON_RECLAIM)                     
+	|	    [*] Build DAMON-based LRU-lists sorting (DAMON_LRU_SORT)
+```
