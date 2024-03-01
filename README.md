@@ -596,9 +596,21 @@ Customize the kernel first using following CONFIGS to the kernel
 
 Firmware issues
 ```bash
-CONFIG_SYSFB_SIMPLEFB=y
-CONFIG_DRM_SIMPLEDRY=y
-CONFIG_DRM_FBDEV_EMULATIONS=y
+#CONFIG_SYSFB_SIMPLEFB=y
+-> Device Drivers
+  -> Firmware Drivers
+    -> Mark VGA/VBE/EFI FB as generic system framebuffer (SYSFB_SIMPLEFB [=y])
+
+# CONFIG_DRM_SIMPLEDRM=y
+-> Device Drivers 
+  -> Graphics support
+    -> Simple framebuffer driver (DRM_SIMPLEDRM [=m])
+
+#CONFIG_DRM_FBDEV_EMULATIONS=y
+-> Device Drivers 
+  -> Graphics support
+    -> Enable legacy fbdev support for your modesetting driver (DRM_FBDEV_EMULATION [=y])
+
 ```
 
 Config for DAMON
