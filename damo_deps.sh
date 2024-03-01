@@ -5,4 +5,6 @@ sudo apt install libslang2-dev \
 		 libperl-dev   \
 		 libbabeltrace-dev \
 		 libpfm4-dev	\
-		 libtraceevent-dev
+		 libtraceevent-dev \
+		 clang	\
+		 asciidoc
