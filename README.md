@@ -627,3 +627,11 @@ Memory Management Config
 	|	    [*] Build DAMON-based reclaim (DAMON_RECLAIM)                     
 	|	    [*] Build DAMON-based LRU-lists sorting (DAMON_LRU_SORT)
 ```
+
+## perf - Performance analysis tool for linux
+
+For custom kernel install `perf` using following
+- Go to dir `linux/tools/perf/`
+- `make`
+- `make prefix=/usr/local install` Installs all bin in the `/usr/local`
+
