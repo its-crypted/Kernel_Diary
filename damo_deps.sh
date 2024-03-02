@@ -7,4 +7,10 @@ sudo apt install libslang2-dev \
 		 libpfm4-dev	\
 		 libtraceevent-dev \
 		 clang	\
-		 asciidoc
+		 asciidoc  \
+		 pkg-config \
+		 libnuma-dev \
+		 libzstd-dev \
+		 libpfm4-dev \
+		 libunwind-dev \
+		 systemtap-sdt-dev 
