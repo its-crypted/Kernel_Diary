@@ -1,9 +1,10 @@
 #!/bin/bash
 
 gpg --batch --full-generate-key ip.txt
-SEC_KEY=`gpg --list-secret-keys --with-colons \
+PUB_KEY=`gpg --list-secret-keys --with-colons \
 	| grep 'sec:' \
 	| cut -d : -f 5 \
 	| tail -1`
 
-gpg --armor --export $SEC_KEY | xclip -sel clip
+gpg --armor --export $PUB_KEY | xclip -sel clip
+printf  "\v-----> Content Copied to Clipboard <-----\n"
