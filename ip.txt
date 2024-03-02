@@ -1,0 +1,7 @@
+Key-Type: 1
+Key-Length: 4096
+Expire-Date: 3m
+Name-Real: Pi
+Name-Email: pi@pi.com
+Name-Comment: 024
+#Passphrase: Remove # of this line and enter your passwd here
