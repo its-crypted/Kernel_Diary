@@ -6,4 +6,4 @@ SEC_KEY=`gpg --list-secret-keys --with-colons \
 	| cut -d : -f 5 \
 	| tail -1`
 
-gpg --armor --export $SEC_KEY
+gpg --armor --export $SEC_KEY | xclip -sel clip
