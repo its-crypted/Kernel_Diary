@@ -423,13 +423,13 @@ init scripts. Daemon file are places in `/etc/systemd/system/`
 For creating a system daemon you need to create a `.service` file. suppose we \
 have a file called `v4l2_param` & this is to be run at the time of boot.
 
-Below is the `abc.service` file
+Below is the `v4l.service` file
 ```bash
 # Place this file in /etc/systemd/system/
-# Change the path for zOS_V4L script
+# Change the path for piV4L script
 # Run following commands after placing 
 # systemctl daemon-reload
-# systemctl enable zOS_V4L.service
+# systemctl enable piV4L.service
 [Unit]
 Description=Run script at startup after network becomes reachable
 After=getty.target
@@ -437,7 +437,7 @@ After=getty.target
 [Service]
 Type=simple
 RemainAfterExit=yes
-ExecStart=/home/mzjet/work/system_supervisor/zOS_V4L
+ExecStart=/home/user/pi/sys_sup/piV4L
 TimeoutStartSec=0
 
 [Install]
