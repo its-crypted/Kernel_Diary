@@ -13,4 +13,5 @@ sudo apt install libslang2-dev \
 		 libzstd-dev \
 		 libpfm4-dev \
 		 libunwind-dev \
-		 systemtap-sdt-dev 
+		 systemtap-sdt-dev \
+		 openjdk-8-jdk
