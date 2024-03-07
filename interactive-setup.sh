@@ -50,7 +50,7 @@ EOF
 }
 
 function set_ssh {
-	read -p "Enter comment for \"ssk-keygen -C\"" SSH_C
+	read -p "Enter comment for \"ssh-keygen -C\"" SSH_C
 }
 
 CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
@@ -153,9 +153,16 @@ function qemu() {
 }
 
 function gengpg() {
-	gpg --full-generate-keys
-	gpg --list-secret-keys --keyid-format long
+	gpg --batch --full-generate-keys ip.txt
+	PUB_KEY=`gpg --list-secret-keys --with-colons \
+		| grep 'sec:' \
+		| cut -d : -f 5 \
+		| tail -1 `
 	
+	gpg --armor --export $PUB_KEY | xclip -sel clip
+	echo 
+	echo -e "${BGreen}---** COPIED PUBLIC KEY TO CLIPBOARD **---${CO}"
+	echo
 }
 
 function main(){
