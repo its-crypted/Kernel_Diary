@@ -1,9 +1,16 @@
 #!/bin/bash
+# SPDX-License-Identifier: GPL-2.0
 
-kernel_version=$(uname -r)
-read -p "Enter the path of kernel $kernel_version"$'\n' kpath
-kpath=$(eval "echo $kpath")
-kpath=$(realpath "$kpath")
+k_ver=$(uname -r)
+
+check_damon() { 
+	if zgrep -q "CONFIG_DAMON=y" /boot/config-$k_ver; then 
+		echo "DAMON is ENABLED on this kernel."
+	else
+		echo "Please reconfigure this kernel & enable DAMON CONFIG_DAMON=y"
+		exit 0
+	fi
+}
 
 usage() {
 	cat <<EOF
@@ -20,9 +27,12 @@ EOF
 }
 
 perf_install() {
-	cd $kpath
-	if [ -d "tools/perf" ]; then
-		cd tools/perf
+	read -p "Enter the path of kernel $kernel_version"$'\n' kpath
+	kpath=$(eval "echo $kpath")
+	kpath=$(realpath "$kpath")
+#	cd $kpath
+	if [ -d "$kpath" ]; then
+		cd $kpath/tools/perf
 		sudo make
 		sudo make prefix=/usr/local install
 		if [ $? = '0' ]; then
@@ -55,4 +65,24 @@ perf_deps() {
 			 openjdk-8-jdk
 }
 
-perf_install
+check_damon
+
+if [[ $# -gt 1 || $@ == "--help" || $@ == "-h" ]]; then
+	usage
+	exit 0
+fi
+
+#perf_install
+
+
+
+
+
+
+
+
+#if  echo $k_ver | grep -q "generic"; then
+#	echo "This is a generic kernel. It's generic"
+#	exit 0
+#fi
+
