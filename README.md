@@ -640,3 +640,4 @@ For custom kernel install `perf` using following
 - `make`
 - `make prefix=/usr/local install` Installs all bin in the `/usr/local`
 
+perf --record
