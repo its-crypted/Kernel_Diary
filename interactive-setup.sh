@@ -174,8 +174,8 @@ Setup tools
  3. Git
  4. SSH
  5. QEMU
- 6. ALL
- 7. GPG
+ 6. GPG
+ 7. ALL OF ABOVE
 
 EOL
 
@@ -198,6 +198,9 @@ EOL
 	then
 		qemu
 	elif [ set_num -eq 6 ]
+	then
+		gengpg
+	elif [ set_num -eq 7 ]
 	then
 		kernel
 		vi_
