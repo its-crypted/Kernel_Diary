@@ -639,3 +639,15 @@ For custom kernel install `perf` using following
 - Go to dir `linux/tools/perf/`
 - `make`
 - `make prefix=/usr/local install` Installs all bin in the `/usr/local`
+
+## Change default grub 
+
+List all the kernels using \
+`sudo grep menuentry /boot/grub/grub.cfg`
+
+Look at the entries of kernel. There are two entries
+- single menuentry
+- submenu -> Advance options
+
+The entries start from 0 onwards. Edit `/etc/default/grub` and change `GRUB_DEFAULT='3>3'` \
+This means select the 3 option on first menuentry & select the 3 from the options provided inside.
