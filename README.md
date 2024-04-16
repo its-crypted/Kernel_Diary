@@ -651,3 +651,7 @@ Look at the entries of kernel. There are two entries
 
 The entries start from 0 onwards. Edit `/etc/default/grub` and change `GRUB_DEFAULT='3>3'` \
 This means select the 3 option on first menuentry & select the 3 from the options provided inside.
+
+## BIOS version check
+
+`sudo dmidecode | grep bios`
