@@ -655,3 +655,4 @@ This means select the 3 option on first menuentry & select the 3 from the option
 ## BIOS version check
 
 `sudo dmidecode | grep bios`
+gives bios version
