@@ -23,7 +23,7 @@ EOF
 echo -e "${CO}"
 sudo apt -y update && sudo apt -y upgrade
 
-function set_git {
+set_git() {
 	echo -e "${BPurple}"
 	u_name=$(git config user.name)
 	u_email=$(git config user.email)
@@ -53,18 +53,20 @@ set_ssh() {
 	read -p "Enter comment for \"ssh-keygen -C\"" SSH_C
 }
 
-CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
-if [ $CORE_COUNT > 0 ]
-then
-	echo -e "${BGreen}---** Vitualization OK **---${CO}"
-else
-	echo -e "${BRed}"
-	echo "Enable Virtualization in BIOS --> EXITING"
-	echo -e "${CO}"
-	exit 0
-fi
+virt_check() {
+	CORE_COUNT=egrep -c '(vmx | svm)' /proc/cpuinfo
+	if [ $CORE_COUNT > 0 ]
+	then
+		echo -e "${BGreen}---** Vitualization OK **---${CO}"
+	else
+		echo -e "${BRed}"
+		echo "Enable Virtualization in BIOS --> EXITING"
+		echo -e "${CO}"
+		exit 0
+	fi
+}
 
-function cd_up() {
+cd_up() {
     echo -e "
     #This is for the cd.. so that you can go to specified directory
 
@@ -83,7 +85,7 @@ function cd_up() {
     " >> ~/.bashrc
 }
 
-function vi_() {
+vi_() {
 cat <<- EOF >> ~/.vimrc
 syntax on
 set title
@@ -113,7 +115,7 @@ noremap <Leader>P "+p
 EOF
 }
 
-function kernel() {	
+kernel() {	
     sudo apt -y install vim git openssh-client libssl-dev \
 		 linux-headers-`uname -r` build-essential \
 		 dwarves zstd libelf-dev flex bison exuberant-ctags \
@@ -140,7 +142,7 @@ function kernel() {
 	fi
 }
 
-function qemu() {
+qemu() {
    	 sudo apt -y install kernel-package fakeroot ccache qemu \
          qemu-kvm qemu-system libvirt-daemon bridge-utils \
          virt-manager gdb
@@ -152,7 +154,7 @@ function qemu() {
 	sudo systemctl enable libvirtd
 }
 
-function gengpg() {
+gengpg() {
 	gpg --batch --full-generate-keys ip.txt
 	PUB_KEY=`gpg --list-secret-keys --with-colons \
 		| grep 'sec:' \
@@ -165,7 +167,7 @@ function gengpg() {
 	echo
 }
 
-function main(){
+main(){
 
 cat >&2 << EOL
 Setup tools
@@ -213,4 +215,4 @@ EOL
 	fi
 }
 
-main()	
+main
