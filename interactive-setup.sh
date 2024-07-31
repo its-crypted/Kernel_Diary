@@ -182,25 +182,25 @@ EOL
 	echo "Select what you want to setup"
 	read -p "Enter number: " set_num
 
-	if [ set_num = 1 ]
+	if [ $set_num = 1 ]
 	then
 		kernel
-	elif [ set_num -eq 2 ]
+	elif [ $set_num -eq 2 ]
 	then
 		vi_
-	elif [ set_num -eq 3 ]
+	elif [ $set_num -eq 3 ]
 	then
 		set_git
-	elif [ set_num -eq 4 ]
+	elif [ $set_num -eq 4 ]
 	then
 		set_ssh
-	elif [ set_num -eq 5 ]
+	elif [ $set_num -eq 5 ]
 	then
 		qemu
-	elif [ set_num -eq 6 ]
+	elif [ $set_num -eq 6 ]
 	then
 		gengpg
-	elif [ set_num -eq 7 ]
+	elif [ $set_num -eq 7 ]
 	then
 		kernel
 		vi_
