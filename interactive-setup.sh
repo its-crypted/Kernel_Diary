@@ -27,7 +27,7 @@ function set_git {
 	echo -e "${BPurple}"
 	u_name=$(git config user.name)
 	u_email=$(git config user.email)
-	if [ u_name == "" && u_email == "" ]
+	if [ $u_name == "" && $u_email == "" ]
 	then
 	echo -e "${BPurple}"
 cat >&2<< EOF
@@ -39,7 +39,7 @@ cat >&2<< EOF
 EOF
 	echo -e "${CO}"
 	read -p "Enter[y/n]: " set_ne
-	if [ set_ne == 'y' ]
+	if [ $set_ne == 'y' ]
 	then
 		read -p "Enter user.email for git: " MAIL
 		read -p "Enter user.name for git: " NAME
@@ -49,7 +49,7 @@ EOF
 	fi
 }
 
-function set_ssh {
+set_ssh() {
 	read -p "Enter comment for \"ssh-keygen -C\"" SSH_C
 }
 
