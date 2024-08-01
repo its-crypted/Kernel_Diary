@@ -21,7 +21,15 @@ cat >&2<< EOF
 +----------------------------------------+
 EOF
 echo -e "${CO}"
-sudo apt -y update && sudo apt -y upgrade
+sudo apt -y update 
+sudo apt -y upgrade
+
+deps() {
+    sudo apt -y install vim vim-gtk3 git openssh-client libssl-dev \
+		 linux-headers-`uname -r` build-essential \
+		 dwarves zstd libelf-dev flex bison exuberant-ctags \
+		 cscope git-email libncurses5-dev gcc make terminator 
+}
 
 set_git() {
 	echo -e "${BPurple}"
@@ -116,10 +124,6 @@ EOF
 }
 
 kernel() {	
-    sudo apt -y install vim git openssh-client libssl-dev \
-		 linux-headers-`uname -r` build-essential \
-		 dwarves zstd libelf-dev flex bison exuberant-ctags \
-		 cscope git-email libncurses5-dev gcc make terminator \
 	
 	echo "Which Kernel you want to download? Currently the depth for dow
 	downloading the kernel has been set to 3"
@@ -168,6 +172,8 @@ gengpg() {
 }
 
 main(){
+
+deps
 
 cat >&2 << EOL
 Setup tools
