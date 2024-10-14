@@ -656,3 +656,8 @@ This means select the 3 option on first menuentry & select the 3 from the option
 
 `sudo dmidecode | grep bios`
 gives bios version
+
+## Install snap & multipass
+
+`sudo apt install snapd`
+`sudo snap install multipass`
